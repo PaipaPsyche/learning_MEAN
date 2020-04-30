@@ -1,3 +1,125 @@
-body{
+/* //general containers */
+
+html,body, .out-pane{
+  margin: 0px;
+  height:100%;
+  background-color  : #eee;
+}
+
+.formu-log{
+  margin: 0px;
+  height:100%;
+  width: 100%;
   background: #eee;
+}
+
+.navigation{
+  text-align: center;
+  color: white;
+  background: #1C1C1F;
+  height: 100%;
+  width: 100%;
+  align-content: center;
+  margin: auto;
+}
+.navigation .fas{
+  font-size: 20px;
+  width: 100%;
+}
+
+.navigation a{
+  color: #ccc;
+  margin-top:20px;
+  margin-bottom: 20px;
+  width:100%;
+  font-size: 14px;
+  display: block;
+  text-decoration: none;
+  transition: 0.4s color;
+
+}
+
+.head-title{
+  font-size: 26px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 25px;
+  display: block;
+}
+
+.head-title .fas{
+  font-size: 30px;
+
+}
+
+.display-home {
+  background: #eee;
+  height: 100%;
+  width:100%
+  margin: 0px;
+
+}
+
+.artist_image_for_edit img{
+  width: 250px;
+}
+
+
+
+.actived{
+
+  border-left: 4px solid #4cd137;
+
+  /* border-top: 2px solid  #2F2F2F;
+  border-bottom: 2px solid  #0D0D0D;
+
+  border-radius: 50%; */
+
+}
+.actived .fas{
+  color: #4cd137;
+}
+
+
+
+/* hover */
+.head-title a:hover{
+  color: #4cd137;
+  text-decoration: none;
+}
+
+
+.nav-out:hover{
+  color: #ff5252;
+  text-decoration: none;
+
+}
+
+.nav-link:hover{
+  /* color: #05c46b; */
+  color:white;
+  text-decoration: none;
+}
+
+
+
+
+
+
+
+
+#image-logged{
+  margin: 0px auto;
+  margin-top: 5px;
+  background: #eee;
+  border-radius: 100px;
+  overflow: hidden;
+}
+
+#user_logged{
+  background: #1C1C1F;
+  position: absolute;
+  bottom: 0px;
+  border-top: 2px solid #444;
+  width:75%;
 }

@@ -19,7 +19,7 @@ function saveUser(req,res){
   var user  =  new User();
   var params = req.body;
 
-  console.log(params);
+
 
   user.name = params.name;
   user.surname = params.surname;
@@ -92,6 +92,10 @@ function updateUser(req,res){
   var userId = req.params.id; // id es un adicional en la ruta definida por el Router
   //params parece ser anexo al link o ruta
   var update = req.body;
+  if(userId!=req.user.sub){
+    return res.status(500).send({message:'No tienes permiso para actualizar este usuario'})
+
+  }
 
   User.findByIdAndUpdate(userId,update,(err,userUpdated)=>{
     if(err){
@@ -105,6 +109,7 @@ function updateUser(req,res){
 
     }
   })
+
 }
 
 function uploadImage(req,res){
@@ -129,7 +134,7 @@ function uploadImage(req,res){
           if(!userUpdated){
             res.status(404).send({message:"No se ha podido actualizar el usuario"})
           }else{
-            res.status(200).send({image: filename, user:userUpdated})
+            res.status(200).send({image: file_name, user:userUpdated})
           }
 
         }
