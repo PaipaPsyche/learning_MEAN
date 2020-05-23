@@ -13,6 +13,11 @@ html,body, .out-pane{
   background: #eee;
 }
 
+.out-pane{
+  height: 100%;
+  overflow-y: scroll;
+}
+
 .navigation{
   text-align: center;
   color: white;
@@ -21,6 +26,7 @@ html,body, .out-pane{
   width: 100%;
   align-content: center;
   margin: auto;
+  position: fixed;
 }
 .navigation .fas{
   font-size: 20px;
@@ -59,8 +65,8 @@ html,body, .out-pane{
   margin: 0px;
 
 }
-
-.artist_image_for_edit img{
+.artist_image_for_edit img,
+.album_image_for_edit img{
   width: 250px;
 }
 
@@ -78,6 +84,113 @@ html,body, .out-pane{
 }
 .actived .fas{
   color: #4cd137;
+}
+
+
+
+/* artist card */
+.artists-list,
+.album-list{
+  margin: 0px;
+  padding: 0px;
+  margin-top: 10px;
+  list-style: none;
+  width:100%;
+  flex-direction: row;
+}
+
+.artist-item,
+.album-item{
+  margin: 0px;
+  padding: 0px;
+  width: 22%;
+  height: 370px;
+  border: 1px solid #444;
+  margin-left: 20px;
+  margin-top: 20px;
+  background-color:#2F2F2F;
+  transition: 0.5s height;
+
+
+}
+
+.artist-item .artist-image,
+.album-item .album-image{
+  height: 245px;
+  width:100%;
+  margin: 0px;
+  padding: 0px;
+  overflow: hidden;
+}
+
+.artist-item .artist-image img,
+.album-item .album-image img{
+  height: 100%;
+  min-width: 100%;
+}
+.buttons{
+  width: 100%;
+  bottom: 0px;
+  margin: 0px;
+  padding: 0px;
+  margin-top: 10px;
+  margin-left: 3px;
+  align-items: center;
+}
+
+
+.pagination{
+  margin-right: 80px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.art-arrow{
+  font-size: 30px;
+  margin: 10px;
+  color: #1C1C1F;
+  transition: 0.5s color;
+}
+
+
+.artist-name,
+.album-name{
+  width:100%;
+  margin-bottom: 5px;
+  margin-left: 3px;
+}
+
+.album-name a,
+.artist-name a{
+  color: #ccc;
+  margin-top:5px;
+  margin-bottom: 5px;
+  width:100%;
+  font-size: 16px;
+  display: block;
+  font-weight: bold;
+  transition: 1s color;
+  transition: 1s font-size;
+}
+
+.album-name p,
+.artist-name p{
+  color: #ccc;
+  margin-top:2px;
+  margin-bottom: 2px;
+  width:100%;
+  font-size: 12px;
+  display: block;
+}
+
+.artist-box{
+  margin-top: 15px;
+}
+.confirm{
+
+width:100%;
+
+background-color: #2F2F2F;
 }
 
 
@@ -102,6 +215,21 @@ html,body, .out-pane{
 }
 
 
+.art-arrow:hover{
+  color: #4cd137;
+}
+.album-name a:hover,
+.artist-name a:hover{
+  color: white;
+  font-size: 18px;
+  text-decoration: none;
+
+}
+
+.album-item:hover,
+.artist-item:hover{
+  height: 375px;
+}
 
 
 
@@ -122,4 +250,20 @@ html,body, .out-pane{
   bottom: 0px;
   border-top: 2px solid #444;
   width:75%;
+}
+
+#album-head-card .image,
+#artist-head-card .artistcard-image{
+  width:200px;
+  height: 200px;
+  overflow: hidden;
+  float: left;
+  margin-right: 30px;
+}
+
+
+
+#album-head-card .image img,
+#artist-head-card .artistcard-image img{
+  height:200px;
 }

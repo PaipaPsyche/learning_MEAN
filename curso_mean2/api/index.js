@@ -12,15 +12,15 @@ mongoose.Promise = global.Promise; //apagar texto de mongoose
 mongoose.connect('mongodb://localhost:27017/curse_node_angular2',(err,res)=>{
 
 
-if(err){ //si hay error lanzar la excepcion err, de lo contrario imprimir mensaje.
-  throw err;
-}
-else{
-  console.log("La conexión al a base de datos esa corriendo correctamente.")
+  if(err){ //si hay error lanzar la excepcion err, de lo contrario imprimir mensaje.
+    throw err;
+  }
+  else{
+    console.log("La conexión al a base de datos esa corriendo correctamente.")
 
-  app.listen(port,function(){
-    console.log("servidr del API rest escuchando en http//:localhost:"+port)
-  })
-}
+    app.listen(port,function(){
+      console.log("servidr del API rest escuchando en http//:localhost:"+port)
+    })
+  }
 
 });

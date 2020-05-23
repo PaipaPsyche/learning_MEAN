@@ -80,6 +80,12 @@ export class ArtistEditComponent implements OnInit{
           }else{
             this.alertMessage='Artista actualizado correctamente';
 
+            if(!this.filesToUpload){
+              this._router.navigate(['/artista',response.artist._id]);
+            }else{
+
+            }
+
             //subir img de artista
             this._uploadService.makeFileRequest(this.url+'upload-image-artist/'+id,[],this.filesToUpload,this.token,'image')
                 .then(
@@ -87,8 +93,8 @@ export class ArtistEditComponent implements OnInit{
                       this._router.navigate(['/artistas/1']);
                   },
                   (error) => {
-                      console.log(error)
-;                  }
+                      console.log(error);
+                  }
                 );
 
             //this.artist = response.artist;
