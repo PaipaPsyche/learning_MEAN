@@ -97,6 +97,7 @@ html,body, .out-pane{
   list-style: none;
   width:100%;
   flex-direction: row;
+  min-height: 400px;
 }
 
 .artist-item,
@@ -104,7 +105,7 @@ html,body, .out-pane{
   margin: 0px;
   padding: 0px;
   width: 22%;
-  height: 370px;
+  height: 350px;
   border: 1px solid #444;
   margin-left: 20px;
   margin-top: 20px;
@@ -226,15 +227,41 @@ background-color: #2F2F2F;
 
 }
 
-.album-item:hover,
+/* .album-item:hover,
 .artist-item:hover{
   height: 375px;
+} */
+
+
+
+.song-list{
+  margin: 0px;
+  padding: 0px;
 }
 
+.seguro-song{
+  position: absolute;
+  right: 60px;
+  margin-top: -28px;
+  background: #eee;
+  width: 30%;
+}
 
+.song-item{
+  list-style: none;
+  border-bottom: 1px solid #444;
+  padding-top: 15px;
+}
 
+.song-item .buttons{
+  float: right;
+  width: 20%;
+  margin-bottom: 20px;
+}
 
-
+.song-item .icono{
+  margin-right: 10px;
+}
 
 #image-logged{
   margin: 0px auto;
@@ -266,4 +293,51 @@ background-color: #2F2F2F;
 #album-head-card .image img,
 #artist-head-card .artistcard-image img{
   height:200px;
+}
+
+
+/*PLAYER*/
+.player{
+  background: #1C1C1F;
+  position: fixed;
+  bottom: 0;
+  width: 92%;
+  padding: 10px;
+  margin-left: -15px;
+
+}
+
+.player .album-image{
+  float: left;
+  width : 118px;
+  height: 100px;
+  overflow: hidden;
+}
+
+.player .album-image img{
+  height: 100%;
+}
+
+
+.player .audio-file{
+  width: 85%;
+  height: 30px;
+  margin-top: -5px;
+  margin-left: 10px;
+  float: left;
+  color: grey;
+}
+
+.player p{
+  color: white;
+  margin-left: -15px;
+}
+
+.player audio{
+  width: 100%;
+  height: 30px;
+  margin-left: -5px;
+  margin-top: 10px;
+  border: 4px solid #1C1C1F;
+
 }
